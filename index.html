@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>六角西餐廳</title>
+    <style>
+        * {
+            font-family: Microsoft JhengHei;
+        }
+
+        .btn {
+            /* 邊線的粗細 */
+            border-width: 2px;
+        }
+
+        .header-carousel-item {
+            height: 450px;
+        }
+
+        .bg-cover {
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        @media (min-width: 768px) {
+            .text-md-dark {
+                color: #333;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-secondary py-1">
+        <div class="container text-right">
+            <a href="#" class="text-white"><i class="fab fa-facebook-square"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-twitter-square"></i></a>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo_w.svg" width="120px" height="24px" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">首頁 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            美味菜單
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">輕盈沒負擔</a>
+                            <a class="dropdown-item" href="#">沒肉不舒服</a>
+                            <a class="dropdown-item" href="#">調味魔法棒</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <a class="btn btn-outline-primary mr-1" href="#" role="button" data-toggle="modal"
+                        data-target="#loginModal">登入</a>
+                    <a class="btn btn-primary" href="#" role="button" data-toggle="modal"
+                        data-target="#registerModal">註冊</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <!-- 另外新增一個header-carousel-item做修改-->
+                <div class="carousel-item header-carousel-item bg-cover active"
+                    style="background-image: url(https://images.unsplash.com/photo-1492683513054-55277abccd99?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=)">
+                    <div class="carousel-caption d-none d-md-block px-3">
+                        <h5>一個人，午後間的輕鬆美味</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea rem ab, sit corporis nostrum
+                            eius quidem quo iste pariatur fuga praesentium optio distinctio vel aperiam non tenetur
+                            nihil assumenda quod!</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item header-carousel-item bg-cover"
+                    style="background-image: url(https://images.unsplash.com/photo-1497668512640-fcbd959e5338?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=)">
+                    <div class="carousel-caption d-none d-md-block px-3">
+                        <h5>Thin Pizza Crust & Margaret Pizza</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ipsam assumenda numquam
+                            odit laborum alias magni, rerum accusantium totam tempora, eligendi modi voluptates commodi
+                            architecto impedit hic ullam officia corporis?</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item header-carousel-item bg-cover"
+                    style="background-image: url(https://images.unsplash.com/photo-1453831362806-3d5577f014a4?dpr=2&auto=format&fit=crop&w=1500&h=1016&q=80&cs=tinysrgb&crop=)">
+                    <div class="carousel-caption d-none d-md-block px-3">
+                        <h5>泰式酸辣鮮蝦蛋炒飯</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione accusamus qui autem maxime!
+                            Est, dolore tempore, vel porro ab, delectus exercitationem asperiores earum eaque rerum
+                            cumque ex nam vero laudantium.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+    <section class="bg-info py-5 text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- fa-5x   Font Awesome圖案五倍大-->
+                    <div class="mb-2"><i class="fas fa-utensils fa-5x"></i></div>
+                    <h3>Informations</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis magni expedita quae! Sit,
+                        nesciunt!
+                        Ducimus distinctio iusto corporis quia eaque voluptas, accusantium vitae exercitationem deleniti
+                        mollitia ab ut veniam officiis?</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-2"><i class="fas fa-pizza-slice fa-5x"></i></div>
+                    <h3>About us</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis fugit, error explicabo similique
+                        fuga dolor ex sapiente ipsum cupiditate est, sit labore. Error tempora, autem ex ab saepe
+                        reiciendis
+                        fugit!</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-2"><i class="fas fa-hamburger fa-5x"></i></div>
+                    <h3>News</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem doloremque voluptates quo eum
+                        corrupti illo harum nesciunt beatae non repellat laborum laboriosam magni similique suscipit,
+                        vero
+                        autem laudantium nemo quis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid py-5 bg-light text-white position-relative">
+        <div class="row">
+
+            <div class="col-md-5 bg-cover position-absolute"
+                style="background-image: url(https://images.unsplash.com/photo-1516054575922-f0b8eeadec1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80); top: 0; bottom: 0;">
+            </div>
+
+            <div class="col-12">
+                <div class="row justify-content-end text-md-dark">
+                    <div class="col-md-7">
+                        <h4>Welcome</h4>
+                        <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat officia
+                            assumenda
+                            debitis repudiandae laboriosam unde! Nam fuga magni tempora animi similique? Sunt atque enim
+                            quibusdam
+                            modi voluptas id iusto, ad vel! In illo rem quod corporis est explicabo sunt delectus sit
+                            placeat
+                            obcaecati! Aspernatur maiores ut dicta consectetur deserunt quis ex, aliquam laborum
+                            mollitia
+                            veniam
+                            obcaecati quam temporibus? Reprehenderit, necessitatibus? Nisi ipsum, molestias sit
+                            voluptates,
+                            fugit?</p>
+
+                        <div class="my-3">
+                            <button type="button" class="btn btn-outline-primary">查看更多</button>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Concept</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non harum illum quos
+                                    voluptatibus illo eos aut omnis exercitationem itaque recusandae.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Meat Cake</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos vel, fuga porro non
+                                    facere delectus aliquid provident assumenda ut veniam.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h4 class="text-center my-3 font-weight-bold">如何這麼美味</h4>
+            <div class="row">
+                <div class="col-md-6 my-3">
+                    <div class="d-flex">
+                        <div class="mr-3"><i class="fas fa-seedling fa-4x"></i></div>
+                        <div>
+                            <h3>Fresh Ingredients</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium amet facere sit
+                                facilis maiores hic esse, autem nobis saepe? Eligendi!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <div class="d-flex">
+                        <div class="mr-3"><i class="fas fa-star fa-4x"></i></div>
+                        <div>
+                            <h3>Preservative free</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam laudantium dolorum neque
+                                ex
+                                iusto! Nobis perspiciatis dolore nesciunt asperiores earum!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <div class="d-flex">
+                        <div class="mr-3"><i class="fas fa-clock fa-4x"></i></div>
+                        <div>
+                            <h3>All Made In Fresh</h3>
+                            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptates, quia qui
+                                laudantium suscipit sapiente saepe amet minus modi perspiciatis.</P>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <div class="d-flex">
+                        <div class="mr-3"><i class="fas fa-heart fa-4x"></i></div>
+                        <div>
+                            <h3>Cook from the Heart</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita ea sequi dicta omnis
+                                illum porro? Esse eaque rem omnis voluptates?</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid position-relative py-5 text-white">
+        <div class="row flex-row-reverse">
+
+            <div class="col-md-5 bg-cover position-absolute"
+                style="background-image: url(https://images.unsplash.com/photo-1523529733369-8c9cf7593bdc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80); top: 0; bottom: 0;">
+            </div>
+
+            <div class="col-12">
+                <div class="row text-md-dark">
+                    <div class="col-md-7">
+                        <h3>We Promiss</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, nam.</p>
+                        <dl class="row">
+                            <dt class="col-sm-3">Description lists</dt>
+                            <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+
+                            <dt class="col-sm-3">Euismod</dt>
+                            <dd class="col-sm-9">Vestibulum id ligula porta felis euismod semper eget lacinia odio sem
+                                nec
+                                elit.
+                            </dd>
+                            <dd class="col-sm-9 offset-sm-3">Donec id elit non mi porta gravida at eget metus.</dd>
+
+                            <dt class="col-sm-3">Malesuada porta</dt>
+                            <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
+
+                            <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
+                            <dd class="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                                nibh, ut
+                                fermentum massa justo sit amet risus.</dd>
+
+                            <dt class="col-sm-3">Nesting</dt>
+                            <dd class="col-sm-9">
+                                <dl class="row">
+                                    <dt class="col-sm-4">Nested definition list</dt>
+                                    <dd class="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit
+                                        nunc.
+                                    </dd>
+                                </dl>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 表單 -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7229.428599181383!2d121.5569333!3d25.043768!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abc708f43081%3A0x3e2739d2cb214ab8!2z5ZyL54i257SA5b-16aSo56uZ!5e0!3m2!1szh-TW!2stw!4v1571127747105!5m2!1szh-TW!2stw"
+                        width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">姓名*</label>
+                            <input type="text" class="form-control" id="username" placeholder="請輸入姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phonenumber">電話號碼*</label>
+                            <input type="tel" class="form-control" id="phonenumber" placeholder="請輸入您的電話號碼" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail*</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="number">用餐人數*</label>
+                            <input type="number" class="form-control" id="number" placeholder="請輸入人數" required>
+                        </div>
+
+
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio1">需要素食</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio2">不需要素食</label>
+                        </div>
+                        <div class="text-right">
+                            <button type="button" class="btn btn-secondary">取消</button>
+                            <button type="submit" class="btn btn-primary">送出</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 p-5 bg-cover text-white"
+                style="background-image: url(https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);">
+                <div class="row">
+                    <div class="col-md-9">
+                        <small>加入我們</small>
+                        <h3>Join us</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nulla distinctio,
+                            repellendus
+                            veritatis aspernatur inventore architecto quis quaerat quasi aut.</p>
+                        <a class="btn btn-outline-warning" href="#" role="button">加入我們</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 p-5 bg-cover text-white"
+                style="background-image: url(https://images.unsplash.com/photo-1498668629810-d79dcafa7617?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);">
+                <div class="row">
+                    <div class="col-9">
+                        <small>享受樂趣</small>
+                        <h3>Have Fun</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nulla distinctio,
+                            repellendus
+                            veritatis aspernatur inventore architecto quis quaerat quasi aut.</p>
+                        <a class="btn btn-outline-warning" href="#" role="button">品嘗佳餚</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container py-4">
+        <small class="text-secondary">© Copyright 2019 Bacon</small>
+    </footer>
+
+
+
+
+    <!-- loginModal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">登入 Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="mr-auto" data-dismiss="modal" data-toggle="modal"
+                        data-target="#registerModal">切換到註冊</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- registerModal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">註冊 registered</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3>註冊六角西餐廳</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate dolores eius saepe
+                                nemo cum deleniti tempore! Magnam praesentium tempora quae.</p>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt sed eaque aut rerum! Animi
+                                consectetur laborum iusto non, voluptatibus explicabo.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">密碼</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                        placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">確認密碼</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                        placeholder="Password">
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">同意條款</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="mr-auto" data-dismiss="modal" data-toggle="modal"
+                        data-target="#loginModal">切換到登入</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">註冊</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="https://kit.fontawesome.com/eea7328a7f.js" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+
+            $('a[data-dismiss="modal"][data-toggle="modal"]').on('click', function () {
+
+
+                // 我要打開的modal的id
+                var target = $(this).data('target');
+
+                // 等modal出現完了之後觸發事件
+                $(target).on('shown.bs.modal', function () {
+                    $('body').addClass('modal-open');
+                });
+
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

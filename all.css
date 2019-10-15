@@ -1,0 +1,12 @@
+* {
+    font-family: Microsoft JhengHei;
+}
+
+.btn {
+    /* 邊線的粗細 */
+    border-width: 2px;
+}
+
+.header-carousel-item{
+    height: 450px;
+}
